@@ -1,0 +1,39 @@
+// create jsp page from html files
+
+
+// create servletController
+
+// create class package
+
+
+// create classes
+	
+	- Car
+	- Customer
+	- Contract
+	
+// create database
+
+	-table : tblCar
+	:::::::::::::::::::::::::(  Car  ):::::::::::::::::::::::::
+	    -carId  
+	    -carName
+
+	-table : tblCustomer
+    :::::::::::::::::::::::(  Customer  ):::::::::::::::::::::::
+	    -customerId
+	    -customerName
+
+	-table : tblRent
+    :::::::::::::::::::::::(  Rent  ):::::::::::::::::::::::    
+	    -rentId    
+	    -rentDate  
+	    -carId    
+	    -customerId    
+	    -rentDays    
+
+	
+		
+
+
+// configure database connection
