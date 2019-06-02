@@ -279,7 +279,7 @@
           <!-- right column -->
           <div class="col-md-6">
             <div class="box-body">
-              <img class="img-responsive pad" src="img/main-page-pic.png" alt="Photo">
+              <img class="img-responsive pad" src="img/car-rental.jpg" alt="Photo">
 
 
             </div>
