@@ -52,6 +52,7 @@ public class RentalControllerServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 
 		try {
+			System.out.println("----------START TRY------------");
 
 			// read the command parameter
 			String cmd = request.getParameter("command");
@@ -102,7 +103,7 @@ public class RentalControllerServlet extends HttpServlet {
 		request.setAttribute("CAR_LIST", cars);
 
 		// send request to JSP page
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/addCar.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("list-cars.jsp");
 		dispatcher.forward(request, response);
 	}
 
