@@ -126,7 +126,7 @@
 
 									<div class="form-group">
 										<label for="carName">Car Name :</label> <input type="text"
-											class="form-control" id="carName" value="Honda">
+											class="form-control" name="carName" id="carName" value="Honda">
 									</div>
 
 									<button type="submit" class="btn btn-default">Save</button>
