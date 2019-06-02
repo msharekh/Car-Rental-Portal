@@ -113,28 +113,10 @@
         </div>
       </nav>
     </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-      <!-- sidebar: style can be found in sidebar.less -->
-      <section class="sidebar">
-
-
-        <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-          <li class="header">MAIN NAVIGATION</li>
-
-
-          <li><a href="./index.jsp"><i class="fa fa-book"></i> <span>Home</span></a></li>
-          <li><a href="./addCar.jsp"><i class="fa fa-book"></i> <span>Add Car</span></a></li>
-          <li><a href="./addCustomer.jsp"><i class="fa fa-book"></i> <span>Add Customer</span></a></li>
-          <li><a href="./rentCar.jsp"><i class="fa fa-book"></i> <span>Rent Car</span></a></li>
-
-
-        </ul>
-      </section>
-      <!-- /.sidebar -->
-    </aside>
-    <!-- Content Wrapper. Contains page content -->
+     <!-- Left side column. contains the logo and sidebar -->
+		 
+		<%@ include  file="main-sidebar.html" %>
+		<!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">

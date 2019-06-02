@@ -87,11 +87,9 @@
 				</div>
 			</nav>
 		</header>
-	 
-		  <!-- Left side column. contains the logo and sidebar -->
+		<!-- Left side column. contains the logo and sidebar -->
 		 
 		<%@ include  file="main-sidebar.html" %>
-		 
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
