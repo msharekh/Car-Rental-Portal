@@ -116,22 +116,31 @@
 							</div>
 							<div class="box-body">
 
- 
+
 								<table class="table">
 									<thead>
 										<tr>
 											<th>Car Name</th>
-
+											<th></th>
 										</tr>
+
 									</thead>
 									<tbody>
 										<c:forEach var="car" items="${CAR_LIST}">
 
 
+											<c:url var="deleteLink" value="RentalControllerServlet">
+												<c:param name="command" value="DELETE"></c:param>
+												<c:param name="carId" value="${car.carId}" />
+											</c:url>
 											<tr>
 												<td>${car.carName}</td>
+												<td><a href="${deleteLink}"
+													onclick="if (!(confirm('ARE YOU SURE?'))) return false;">Delete</a>
 
+												</td>
 											</tr>
+
 
 										</c:forEach>
 
