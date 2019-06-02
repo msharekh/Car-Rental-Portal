@@ -10,6 +10,11 @@ public class Car {
 		this.carId = carId;
 		this.carName = carName;
 	}
+	public Car(String carName) {
+		super();
+		
+		this.carName = carName;
+	}
 	
 	public int getCarId() {
 		return carId;

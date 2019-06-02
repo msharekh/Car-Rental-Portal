@@ -1,3 +1,5 @@
 build/classes/com/msh/car/rental/Car.class
 build/classes/com/msh/car/rental/Customer.class
 build/classes/com/msh/car/rental/Rent.class
+build/classes/com/msh/car/rental/RentalControllerServlet.class
+build/classes/com/msh/car/rental/RentalDBUtil.class

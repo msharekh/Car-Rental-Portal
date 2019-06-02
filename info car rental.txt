@@ -1,14 +1,17 @@
 // create jsp page from html files
 
 
-// create servletController
+// create RentalControllerServlet
 
 // create class package
 
 
 // create classes
 	
-	- Car
+ 	:::(  Car  ):::
+	    -carId 
+	    -carName
+	    
 	- Customer
 	- Contract
 	
@@ -16,8 +19,8 @@
 
 	-table : tblCar
 	:::::::::::::::::::::::::(  Car  ):::::::::::::::::::::::::
-	    -carId  
-	    -carName
+	    -car_id  
+	    -car_name
 
 	-table : tblCustomer
     :::::::::::::::::::::::(  Customer  ):::::::::::::::::::::::

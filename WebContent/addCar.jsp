@@ -1,3 +1,6 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -73,36 +76,7 @@
 						<!-- Messages: style can be found in dropdown.less-->
 
 						<!-- Notifications: style can be found in dropdown.less -->
-						<li class="dropdown notifications-menu"><a href="#"
-							class="dropdown-toggle" data-toggle="dropdown"> <i
-								class="fa fa-bell-o"></i> <span class="label label-warning">10</span>
-						</a>
-							<ul class="dropdown-menu">
-								<li class="header">You have 10 notifications</li>
-								<li>
-									<!-- inner menu: contains the actual data -->
-									<ul class="menu">
-										<li><a href="#"> <i class="fa fa-users text-aqua"></i>
-												5 new members joined today
-										</a></li>
-										<li><a href="#"> <i class="fa fa-warning text-yellow"></i>
-												Very long description here that may not fit into the page
-												and may cause design problems
-										</a></li>
-										<li><a href="#"> <i class="fa fa-users text-red"></i>
-												5 new members joined
-										</a></li>
 
-										<li><a href="#"> <i
-												class="fa fa-shopping-cart text-green"></i> 25 sales made
-										</a></li>
-										<li><a href="#"> <i class="fa fa-user text-red"></i>
-												You changed your username
-										</a></li>
-									</ul>
-								</li>
-								<li class="footer"><a href="#">View all</a></li>
-							</ul></li>
 						<!-- Tasks: style can be found in dropdown.less -->
 
 						<!-- User Account: style can be found in dropdown.less -->
@@ -152,132 +126,66 @@
 			<!-- Main content -->
 			<section class="content">
 				<div class="row">
+					<div class="col-md-12">
+						<h2>Car Table</h2>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>Car Name</th>
+								 
+								</tr>
+							</thead>
+							<tbody>
+								<c:forEach var="car" items="${CAR_LIST}">
+
+									 
+									<tr>
+										<td>${car.carName}</td>
+										 
+									</tr>
+
+								</c:forEach>
+
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row">
 					<!-- left column -->
 					<div class="col-md-6">
 						<!-- general form elements -->
 
-						<!-- Form Element sizes -->
 
-
-
-
-						<!-- Input addon -->
 						<div class="box box-info">
 							<div class="box-header with-border">
 								<h3 class="box-title">Input Addon</h3>
 							</div>
 							<div class="box-body">
-								<div class="input-group">
-									<span class="input-group-addon">@</span> <input type="text"
-										class="form-control" placeholder="Username">
-								</div>
-								<br>
 
-								<div class="input-group">
-									<input type="text" class="form-control"> <span
-										class="input-group-addon">.00</span>
-								</div>
-								<br>
 
-								<div class="input-group">
-									<span class="input-group-addon">$</span> <input type="text"
-										class="form-control"> <span class="input-group-addon">.00</span>
-								</div>
+								<form action="RentalControllerServlet">
+									<input type="hidden" name="command" value="ADD">
 
-								<h4>With icons</h4>
-
-								<div class="input-group">
-									<span class="input-group-addon"><i
-										class="fa fa-envelope"></i></span> <input type="email"
-										class="form-control" placeholder="Email">
-								</div>
-								<br>
-
-								<div class="input-group">
-									<input type="text" class="form-control"> <span
-										class="input-group-addon"><i class="fa fa-check"></i></span>
-								</div>
-								<br>
-
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-									<input type="text" class="form-control"> <span
-										class="input-group-addon"><i class="fa fa-ambulance"></i></span>
-								</div>
-
-								<h4>With checkbox and radio inputs</h4>
-
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="input-group">
-											<span class="input-group-addon"> <input
-												type="checkbox">
-											</span> <input type="text" class="form-control">
-										</div>
-										<!-- /input-group -->
+									<div class="form-group">
+										<label for="carName">Car Name :</label> <input type="text"
+											class="form-control" id="carName">
 									</div>
-									<!-- /.col-lg-6 -->
-									<div class="col-lg-6">
-										<div class="input-group">
-											<span class="input-group-addon"> <input type="radio">
-											</span> <input type="text" class="form-control">
-										</div>
-										<!-- /input-group -->
-									</div>
-									<!-- /.col-lg-6 -->
-								</div>
-								<!-- /.row -->
 
-								<h4>With buttons</h4>
+									<button type="submit" class="btn btn-default">Save</button>
+								</form>
 
-								<p class="margin">
-									Large:
-									<code>.input-group.input-group-lg</code>
-								</p>
 
-								<div class="input-group input-group-lg">
-									<div class="input-group-btn">
-										<button type="button" class="btn btn-warning dropdown-toggle"
-											data-toggle="dropdown">
-											Action <span class="fa fa-caret-down"></span>
-										</button>
-										<ul class="dropdown-menu">
-											<li><a href="#">Action</a></li>
-											<li><a href="#">Another action</a></li>
-											<li><a href="#">Something else here</a></li>
-											<li class="divider"></li>
-											<li><a href="#">Separated link</a></li>
-										</ul>
-									</div>
-									<!-- /btn-group -->
-									<input type="text" class="form-control">
-								</div>
-								<!-- /input-group -->
-								<p class="margin">Normal</p>
-
-								<div class="input-group">
-									<div class="input-group-btn">
-										<button type="button" class="btn btn-danger">Action</button>
-									</div>
-									<!-- /btn-group -->
-									<input type="text" class="form-control">
-								</div>
-								<!-- /input-group -->
-								<p class="margin">
-									Small
-									<code>.input-group.input-group-sm</code>
-								</p>
-
-								<div class="input-group input-group-sm">
-									<input type="text" class="form-control"> <span
-										class="input-group-btn">
-										<button type="button" class="btn btn-info btn-flat">Go!</button>
-									</span>
-								</div>
 								<!-- /input-group -->
 							</div>
 							<!-- /.box-body -->
 						</div>
+						<!-- /.box -->
+
+
+
+						<!-- Input addon -->
+
 						<!-- /.box -->
 
 					</div>
@@ -285,9 +193,6 @@
 					<!-- right column -->
 					<div class="col-md-6">
 						<div class="box-body">
-
-
-
 
 
 
@@ -373,175 +278,7 @@
 		</footer>
 
 		<!-- Control Sidebar -->
-		<aside class="control-sidebar control-sidebar-dark">
-			<!-- Create the tabs -->
-			<ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-				<li><a href="#control-sidebar-home-tab" data-toggle="tab"><i
-						class="fa fa-home"></i></a></li>
-				<li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i
-						class="fa fa-gears"></i></a></li>
-			</ul>
-			<!-- Tab panes -->
-			<div class="tab-content">
-				<!-- Home tab content -->
-				<div class="tab-pane" id="control-sidebar-home-tab">
-					<h3 class="control-sidebar-heading">Recent Activity</h3>
-					<ul class="control-sidebar-menu">
-						<li><a href="javascript:void(0)"> <i
-								class="menu-icon fa fa-birthday-cake bg-red"></i>
 
-								<div class="menu-info">
-									<h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-									<p>Will be 23 on April 24th</p>
-								</div>
-						</a></li>
-						<li><a href="javascript:void(0)"> <i
-								class="menu-icon fa fa-user bg-yellow"></i>
-
-								<div class="menu-info">
-									<h4 class="control-sidebar-subheading">Frodo Updated His
-										Profile</h4>
-
-									<p>New phone +1(800)555-1234</p>
-								</div>
-						</a></li>
-						<li><a href="javascript:void(0)"> <i
-								class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-								<div class="menu-info">
-									<h4 class="control-sidebar-subheading">Nora Joined Mailing
-										List</h4>
-
-									<p>nora@example.com</p>
-								</div>
-						</a></li>
-						<li><a href="javascript:void(0)"> <i
-								class="menu-icon fa fa-file-code-o bg-green"></i>
-
-								<div class="menu-info">
-									<h4 class="control-sidebar-subheading">Cron Job 254
-										Executed</h4>
-
-									<p>Execution time 5 seconds</p>
-								</div>
-						</a></li>
-					</ul>
-					<!-- /.control-sidebar-menu -->
-
-					<h3 class="control-sidebar-heading">Tasks Progress</h3>
-					<ul class="control-sidebar-menu">
-						<li><a href="javascript:void(0)">
-								<h4 class="control-sidebar-subheading">
-									Custom Template Design <span
-										class="label label-danger pull-right">70%</span>
-								</h4>
-
-								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-danger"
-										style="width: 70%"></div>
-								</div>
-						</a></li>
-						<li><a href="javascript:void(0)">
-								<h4 class="control-sidebar-subheading">
-									Update Resume <span class="label label-success pull-right">95%</span>
-								</h4>
-
-								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-success"
-										style="width: 95%"></div>
-								</div>
-						</a></li>
-						<li><a href="javascript:void(0)">
-								<h4 class="control-sidebar-subheading">
-									Laravel Integration <span
-										class="label label-warning pull-right">50%</span>
-								</h4>
-
-								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-warning"
-										style="width: 50%"></div>
-								</div>
-						</a></li>
-						<li><a href="javascript:void(0)">
-								<h4 class="control-sidebar-subheading">
-									Back End Framework <span class="label label-primary pull-right">68%</span>
-								</h4>
-
-								<div class="progress progress-xxs">
-									<div class="progress-bar progress-bar-primary"
-										style="width: 68%"></div>
-								</div>
-						</a></li>
-					</ul>
-					<!-- /.control-sidebar-menu -->
-
-				</div>
-				<!-- /.tab-pane -->
-				<!-- Stats tab content -->
-				<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab
-					Content</div>
-				<!-- /.tab-pane -->
-				<!-- Settings tab content -->
-				<div class="tab-pane" id="control-sidebar-settings-tab">
-					<form method="post">
-						<h3 class="control-sidebar-heading">General Settings</h3>
-
-						<div class="form-group">
-							<label class="control-sidebar-subheading"> Report panel
-								usage <input type="checkbox" class="pull-right" checked>
-							</label>
-
-							<p>Some information about this general settings option</p>
-						</div>
-						<!-- /.form-group -->
-
-						<div class="form-group">
-							<label class="control-sidebar-subheading"> Allow mail
-								redirect <input type="checkbox" class="pull-right" checked>
-							</label>
-
-							<p>Other sets of options are available</p>
-						</div>
-						<!-- /.form-group -->
-
-						<div class="form-group">
-							<label class="control-sidebar-subheading"> Expose author
-								name in posts <input type="checkbox" class="pull-right" checked>
-							</label>
-
-							<p>Allow the user to show his name in blog posts</p>
-						</div>
-						<!-- /.form-group -->
-
-						<h3 class="control-sidebar-heading">Chat Settings</h3>
-
-						<div class="form-group">
-							<label class="control-sidebar-subheading"> Show me as
-								online <input type="checkbox" class="pull-right" checked>
-							</label>
-						</div>
-						<!-- /.form-group -->
-
-						<div class="form-group">
-							<label class="control-sidebar-subheading"> Turn off
-								notifications <input type="checkbox" class="pull-right">
-							</label>
-						</div>
-						<!-- /.form-group -->
-
-						<div class="form-group">
-							<label class="control-sidebar-subheading"> Delete chat
-								history <a href="javascript:void(0)" class="text-red pull-right"><i
-									class="fa fa-trash-o"></i></a>
-							</label>
-						</div>
-						<!-- /.form-group -->
-					</form>
-				</div>
-				<!-- /.tab-pane -->
-			</div>
-		</aside>
 		<!-- /.control-sidebar -->
 		<!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
