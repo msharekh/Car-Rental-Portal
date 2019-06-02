@@ -6,6 +6,12 @@ app.controller('addCarCtrl', function ($scope) {
     $scope.title_short = "AC";
 
 });
+app.controller('listCarsCtrl', function ($scope) {
+    $scope.title = "Car List";
+    $scope.formtitle = "Car List";
+    $scope.title_short = "CL";
+
+});
 app.controller('addCustomerCtrl', function ($scope) {
     $scope.title = "Add Customer";
     $scope.formtitle = "Add Customer Form";

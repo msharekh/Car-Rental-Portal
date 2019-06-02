@@ -52,7 +52,7 @@
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
-	<div class="wrapper" ng-app="carRentalApp" ng-controller="addCarCtrl">
+	<div class="wrapper" ng-app="carRentalApp" ng-controller="listCarsCtrl">
 
 
 
@@ -88,8 +88,8 @@
 			</nav>
 		</header>
 		<!-- Left side column. contains the logo and sidebar -->
-		 
-		<%@ include  file="main-sidebar.html" %>
+
+		<%@ include file="main-sidebar.html"%>
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
@@ -104,32 +104,7 @@
 
 			<!-- Main content -->
 			<section class="content">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Car Table</h2>
-						<table class="table">
-							<thead>
-								<tr>
-									<th>Car Name</th>
-								 
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach var="car" items="${CAR_LIST}">
 
-									 
-									<tr>
-										<td>${car.carName}</td>
-										 
-									</tr>
-
-								</c:forEach>
-
-
-							</tbody>
-						</table>
-					</div>
-				</div>
 				<div class="row">
 					<!-- left column -->
 					<div class="col-md-6">
@@ -138,21 +113,32 @@
 
 						<div class="box box-info">
 							<div class="box-header with-border">
-								<h3 class="box-title">Input Addon</h3>
+								<h3 class="box-title">Car Table</h3>
 							</div>
 							<div class="box-body">
 
+ 
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Car Name</th>
 
-								<form action="RentalControllerServlet">
-									<input type="hidden" name="command" value="ADD">
+										</tr>
+									</thead>
+									<tbody>
+										<c:forEach var="car" items="${CAR_LIST}">
 
-									<div class="form-group">
-										<label for="carName">Car Name :</label> <input type="text"
-											class="form-control" id="carName" value="Honda">
-									</div>
 
-									<button type="submit" class="btn btn-default">Save</button>
-								</form>
+											<tr>
+												<td>${car.carName}</td>
+
+											</tr>
+
+										</c:forEach>
+
+
+									</tbody>
+								</table>
 
 
 								<!-- /input-group -->

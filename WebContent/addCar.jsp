@@ -106,32 +106,8 @@
 
 			<!-- Main content -->
 			<section class="content">
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Car Table</h2>
-						<table class="table">
-							<thead>
-								<tr>
-									<th>Car Name</th>
-								 
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach var="car" items="${CAR_LIST}">
-
-									 
-									<tr>
-										<td>${car.carName}</td>
-										 
-									</tr>
-
-								</c:forEach>
-
-
-							</tbody>
-						</table>
-					</div>
-				</div>
+				
+				 
 				<div class="row">
 					<!-- left column -->
 					<div class="col-md-6">
@@ -140,7 +116,7 @@
 
 						<div class="box box-info">
 							<div class="box-header with-border">
-								<h3 class="box-title">Input Addon</h3>
+								<h3 class="box-title">Add Car</h3>
 							</div>
 							<div class="box-body">
 
