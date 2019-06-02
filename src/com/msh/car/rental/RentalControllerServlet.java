@@ -78,9 +78,9 @@ public class RentalControllerServlet extends HttpServlet {
 //			case "UPDATE":
 //				updateStudent(request, response);
 //				break;
-//			case "DELETE":
-//				deleteStudent(request, response);
-//				break;
+			case "DELETE":
+				deleteStudent(request, response);
+				break;
 			default:
 				listCars(request, response);
 				break;
@@ -93,6 +93,20 @@ public class RentalControllerServlet extends HttpServlet {
 
 			throw new ServerException(e.getMessage());
 		}
+	}
+
+	private void deleteStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// TODO Auto-generated method stub
+		
+		// read student info from form
+				String carId = request.getParameter("carId");
+
+				 
+				// add student to database
+				rentalDBUtil.deleteCar(carId);
+
+				// send back to main page
+				listCars(request, response);
 	}
 
 	private void listCars(HttpServletRequest request, HttpServletResponse response) throws Exception {

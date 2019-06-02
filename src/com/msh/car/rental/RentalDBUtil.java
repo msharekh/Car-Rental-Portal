@@ -3,6 +3,7 @@ package com.msh.car.rental;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +108,32 @@ public class RentalDBUtil {
 			close(con, stmt, null);
 		}
 
+	}
+
+	public void deleteCar(String carId) throws Exception {
+		// TODO Auto-generated method stub
+		Connection con = null;
+		PreparedStatement stmt = null;
+
+		try {
+
+			// create sql to insert
+			con = dataSource.getConnection();
+			String sql = "DELETE FROM car WHERE car_id = ?";
+
+			stmt = con.prepareStatement(sql);
+
+			// set params - note it is one base not zero base
+			stmt.setString(1, carId);
+			 	
+
+			// execute sql insert
+			stmt.execute();
+
+		} finally {
+			// clean up JDBC
+			close(con, stmt, null);
+		}
 	}
 
 }
