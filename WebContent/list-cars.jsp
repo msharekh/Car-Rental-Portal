@@ -112,9 +112,21 @@
 
 						<div class="box box-info">
 							<div class="box-header with-border">
-								<h3 class="box-title">Car Table</h3>
+
+								<form action="RentalControllerServlet">
+									<input type="hidden" name="command" value="ADD">
+
+									<div class="form-group">
+										<label for="carName">Car Name :</label> <input type="text"
+											class="form-control" name="carName" id="carName"
+											value="Honda">
+									</div>
+
+									<button type="submit" class="btn btn-default">Save</button>
+								</form>
 							</div>
 							<div class="box-body">
+
 
 
 								<table class="table">
@@ -268,6 +280,12 @@
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="js/angularjs.js"></script>
 
+	<script>
+	$(function(){
+		var _name="CAR"+Date.now().toString().substr(Date.now().toString().length-2,2);
+		document.querySelector("#carName").value=_name;
+	})
+	</script>
 </body>
 
 </html>
