@@ -17,10 +17,10 @@ import com.msh.car.rental.Car;
 import com.msh.car.rental.RentalDBUtil;
 
 /**
- * Servlet implementation class RentalControllerServlet
+ * Servlet implementation class CarController
  */
-@WebServlet("/RentalControllerServlet")
-public class RentalControllerServlet extends HttpServlet {
+@WebServlet("/CarController")
+public class CarController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private RentalDBUtil rentalDBUtil;
@@ -117,7 +117,7 @@ public class RentalControllerServlet extends HttpServlet {
 		request.setAttribute("CAR_LIST", cars);
 
 		// send request to JSP page
-		RequestDispatcher dispatcher = request.getRequestDispatcher("list-cars.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("cars.jsp");
 		dispatcher.forward(request, response);
 	}
 

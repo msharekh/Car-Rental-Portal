@@ -121,7 +121,7 @@
 							<div class="box-body">
 
 
-								<form action="RentalControllerServlet">
+								<form action="CarController">
 									<input type="hidden" name="command" value="ADD">
 
 									<div class="form-group">

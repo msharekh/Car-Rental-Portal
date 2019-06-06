@@ -1,7 +1,18 @@
+step to develop CRUD
+
+/***
+(1)		create car class similar to database table
+(2)		create RentalDBUtil class
+(3)		create addCar/List<Car> method in RentalDBUtil
+(4)		create CarController
+(5)		create addCar(HttpServletRequest  / listCars(request in CarController
+(6)		create jsp page with list table and add form action="CarController" value="ADD"
+***/
+
 // create jsp page from html files
 
 
-// create RentalControllerServlet
+// create CarController
 
 // create class package
 

@@ -50,11 +50,11 @@ public class RentalDBUtil {
 				// create new student object
 				Car car = new Car(carId, carName);
 
-				System.out.println("car: " + car);
 				// add it to list
 				cars.add(car);
 
 			}
+//			System.out.println("cars cnt: " + cars.size());
 			// close JDBC objects
 
 		} finally {
@@ -98,7 +98,6 @@ public class RentalDBUtil {
 
 			// set params - note it is one base not zero base
 			stmt.setString(1, car.getCarName());
-			 	
 
 			// execute sql insert
 			stmt.execute();
@@ -125,7 +124,6 @@ public class RentalDBUtil {
 
 			// set params - note it is one base not zero base
 			stmt.setString(1, carId);
-			 	
 
 			// execute sql insert
 			stmt.execute();

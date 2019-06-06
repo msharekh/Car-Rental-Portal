@@ -62,9 +62,9 @@ body {
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
-				<li><a href="addCar.jsp">add Car</a></li>
-				<li><a href="addCustomer.jsp">add Customer</a></li>
-				<li><a href="rentCar.jsp">rent Car</a></li>
+				<li><a href="cars.jsp">Cars</a></li>
+				<li><a href="customers.jsp">Customers</a></li>
+				<li><a href="rent.jsp">Rent</a></li>
 			</ul>
 		</div>
 	</nav>

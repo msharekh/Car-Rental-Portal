@@ -113,7 +113,7 @@
 						<div class="box box-info">
 							<div class="box-header with-border">
 
-								<form action="RentalControllerServlet">
+								<form action="CarController">
 									<input type="hidden" name="command" value="ADD">
 
 									<div class="form-group">
@@ -141,7 +141,7 @@
 										<c:forEach var="car" items="${CAR_LIST}">
 
 
-											<c:url var="deleteLink" value="RentalControllerServlet">
+											<c:url var="deleteLink" value="CarController">
 												<c:param name="command" value="DELETE"></c:param>
 												<c:param name="carId" value="${car.carId}" />
 											</c:url>
