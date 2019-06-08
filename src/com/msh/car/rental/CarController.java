@@ -25,7 +25,7 @@ public class CarController extends HttpServlet {
 
 	private RentalDBUtil rentalDBUtil;
 
-	@Resource(name = "jdbc/car_rental")
+	@Resource(name = "jdbc/web_car_rental")
 
 	private DataSource dataSource;
 
