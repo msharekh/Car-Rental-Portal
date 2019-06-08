@@ -28,6 +28,19 @@ step to develop CRUD
 	
 // create database
 
+user: car-rental/car-rental
+
+database: CREATE DATABASE `car_rental` /*!40100 DEFAULT CHARACTER SET latin1 */;
+tables: 
+-car
+CREATE TABLE `car` (
+  `car_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`car_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
 	-table : tblCar
 	:::::::::::::::::::::::::(  Car  ):::::::::::::::::::::::::
 	    -car_id  
