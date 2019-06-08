@@ -83,6 +83,22 @@ public class RentalDBUtil {
 		}
 	}
 
+	public void addCustomer(Customer customer) throws Exception {
+		Connection con = null;
+		PreparedStatement stmt = null;
+
+		try {
+
+			dataSource.getConnection();
+			stmt = con.prepareStatement("INSERT INTO customer " + "(customer_name) values" + "(?) ");
+			stmt.setString(1, customer.getCustomerName());
+			stmt.execute();
+
+		} finally {
+			close(con, stmt, null);
+		}
+	}
+
 	public void addCar(Car car) throws Exception {
 
 		Connection con = null;
