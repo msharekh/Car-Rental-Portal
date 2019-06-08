@@ -3,7 +3,7 @@
   <Resource name="jdbc/car_rental" 
   			auth="Container" type="javax.sql.DataSource"
                maxActive="20" maxIdle="5" maxWait="10000"
-               username="root" password="" 
+               username="car_rental_user" password="car_rental_user" 
                driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://localhost:3306/car_rental?useSSL=false&amp;serverTimezone=UTC"/>
 
