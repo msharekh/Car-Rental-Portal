@@ -11,6 +11,10 @@ public class Customer {
 		this.customerName = customerName;
 	}
 	
+	public Customer(String customerName2) {
+		this.customerName = customerName;
+	}
+
 	public int getCustomerId() {
 		return customerId;
 	}
