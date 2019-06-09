@@ -88,9 +88,9 @@ public class RentalDBUtil {
 		PreparedStatement stmt = null;
 
 		try {
+			con = dataSource.getConnection();
 
-			dataSource.getConnection();
-			stmt = con.prepareStatement("INSERT INTO customer " + "(customer_name) values" + "(?) ");
+			stmt = con.prepareStatement("INSERT INTO customer " + "(customer_name) values" + "(?)");
 			stmt.setString(1, customer.getCustomerName());
 			stmt.execute();
 

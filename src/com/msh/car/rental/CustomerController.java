@@ -19,10 +19,18 @@ public class CustomerController extends HttpServlet {
 
 	private RentalDBUtil rentalDBUtil;
 
-	@Resource(name = "jdbc/web_car_rental")
+	@Resource(name = "jdbc/car_rental")
 
 	private DataSource dataSource;
 	
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+ 		
+		rentalDBUtil = new RentalDBUtil(dataSource);
+
+	}
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
