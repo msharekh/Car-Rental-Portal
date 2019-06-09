@@ -9,6 +9,8 @@ step to develop CRUD
 (6)		create jsp page with list table and add form action="CarController" value="ADD"
 ***/
 
+com.mysql.cj.jdbc.Driver
+
 // create jsp page from html files
 
 

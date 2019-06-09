@@ -150,4 +150,43 @@ public class RentalDBUtil {
 		}
 	}
 
+	public List<Customer> getCustomers() {
+		// TODO Auto-generated method stub
+
+		List<Customer> customers = new ArrayList<>();
+
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			con = dataSource.getConnection();
+			stmt = con.createStatement();
+			String sql = "SELECT * FROM customer";
+			rs = stmt.executeQuery(sql);
+
+			while (rs.next()) {
+
+				int customerId = rs.getInt("customer_id");
+				String customerName = rs.getString("customer_name");
+				
+				customers.add(new Customer(customerId,customerName));
+
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return customers;
+
+	}
+
+	public void deleteCustomer(Object customerId) {
+		// TODO Auto-generated method stub
+		String sql="DELETE FROM `car_rental`.`customer` WHERE `customer_id`=?";
+		
+	}
+
 }
