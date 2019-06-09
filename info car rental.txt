@@ -27,6 +27,24 @@ step to develop CRUD
 	- Contract
 	
 // create database
+CREATE SCHEMA `car_rental` ;
+
+user: car_rental_user
+pass: car_rental_user
+
+	CREATE USER 'car_rental_user'@'localhost' IDENTIFIED BY 'car_rental_user';
+	GRANT ALL PRIVILEGES ON *.* TO 'car_rental_user'@'localhost';
+
+database: CREATE DATABASE `car_rental` /*!40100 DEFAULT CHARACTER SET latin1 */;
+tables: 
+-car
+CREATE TABLE `car` (
+  `car_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`car_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 
 	-table : tblCar
 	:::::::::::::::::::::::::(  Car  ):::::::::::::::::::::::::
