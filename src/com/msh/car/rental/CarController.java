@@ -79,7 +79,7 @@ public class CarController extends HttpServlet {
 //				updateStudent(request, response);
 //				break;
 			case "DELETE":
-				deleteStudent(request, response);
+				deleteCar(request, response);
 				break;
 			default:
 				listCars(request, response);
@@ -95,7 +95,7 @@ public class CarController extends HttpServlet {
 		}
 	}
 
-	private void deleteStudent(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	private void deleteCar(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
 		
 		// read student info from form

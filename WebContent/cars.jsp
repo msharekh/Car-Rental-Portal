@@ -52,7 +52,7 @@
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
-	<div class="wrapper" ng-app="carRentalApp" ng-controller="listCarsCtrl">
+	<div class="wrapper" ng-app="carRentalApp" ng-controller="carsCtrl">
 
 
 		<header class="main-header">

@@ -62,8 +62,8 @@ body {
 			</div>
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#">Home</a></li>
-				<li><a href="cars.jsp">Cars</a></li>
-				<li><a href="customers.jsp">Customers</a></li>
+				<li><a href="CarController">Cars</a></li>
+				<li><a href="CustomerController">Customers</a></li>
 				<li><a href="rent.jsp">Rent</a></li>
 			</ul>
 		</div>

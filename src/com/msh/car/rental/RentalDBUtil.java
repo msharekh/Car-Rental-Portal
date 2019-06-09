@@ -183,10 +183,31 @@ public class RentalDBUtil {
 
 	}
 
-	public void deleteCustomer(Object customerId) {
+	public void deleteCustomer(String customerId) throws Exception {
 		// TODO Auto-generated method stub
-		String sql="DELETE FROM `car_rental`.`customer` WHERE `customer_id`=?";
+//		String sql="DELETE FROM `car_rental`.`customer` WHERE `customer_id`=?";
 		
+		Connection con = null;
+		PreparedStatement stmt = null;
+
+		try {
+
+			// create sql to insert
+			con = dataSource.getConnection();
+			String sql = "DELETE FROM customer WHERE customer_id = ?";
+
+			stmt = con.prepareStatement(sql);
+
+			// set params - note it is one base not zero base
+			stmt.setString(1, customerId);
+
+			// execute sql insert
+			stmt.execute();
+
+		} finally {
+			// clean up JDBC
+			close(con, stmt, null);
+		}
 	}
 
 }

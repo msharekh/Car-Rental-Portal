@@ -52,7 +52,7 @@
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
-	<div class="wrapper" ng-app="carRentalApp" ng-controller="listCustomersCtrl">
+	<div class="wrapper" ng-app="carRentalApp" ng-controller="customersCtrl">
 
 
 		<header class="main-header">
@@ -117,7 +117,8 @@
 									<input type="hidden" name="command" value="ADD">
 
 									<div class="form-group">
-										<label for="customerName">Customer Name :</label> <input type="text"
+										<label for="customerName">Customer Name :</label> 
+										<input type="text"
 											class="form-control" name="customerName" id="customerName"
 											value="Mishal">
 									</div>
@@ -223,7 +224,7 @@
 	<script>
 	$(function(){
 		var _name="Customer"+Date.now().toString().substr(Date.now().toString().length-2,2);
-		document.querySelector("#CustomerName").value=_name;
+		document.querySelector("#customerName").value=_name;
 	})
 	</script>
 </body>

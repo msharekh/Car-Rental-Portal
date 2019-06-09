@@ -84,14 +84,22 @@ public class CustomerController extends HttpServlet {
 		}
 	}
 
-	private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
-		Object customerId = null;
+	private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		String customerId = request.getParameter("customerId");
+
+		 
+		// add student to database
+		rentalDBUtil.deleteCustomer(customerId);
+
+		// send back to main page
+		listCustomers(request, response);
+		
 		// TODO Auto-generated method stub
 		rentalDBUtil.deleteCustomer(customerId);
 		
 	}
 
-	private void listCustomers(HttpServletRequest request, HttpServletResponse response) {
+	private void listCustomers(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		// TODO Auto-generated method stub
 		
 		List<Customer> customers  = rentalDBUtil.getCustomers();
@@ -99,7 +107,8 @@ public class CustomerController extends HttpServlet {
 
 		String path = "customers.jsp";
 		RequestDispatcher dispatcher =request.getRequestDispatcher(path);
-		
+		dispatcher.forward(request, response);
+
 	}
 
 	private void addCustomer(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -107,7 +116,7 @@ public class CustomerController extends HttpServlet {
 		Customer customer = new Customer(customerName);
 		rentalDBUtil.addCustomer(customer); 
 		
-		listCars(request, response);
+		listCustomers(request, response);
 
 	}
 
