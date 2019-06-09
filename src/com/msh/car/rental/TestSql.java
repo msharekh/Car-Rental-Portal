@@ -8,14 +8,15 @@ public class TestSql {
 		// TODO Auto-generated method stub
 
 		// register and load driver
-//		Class.forName("com.mysql.jdbc.Driver");
+		// Class.forName("com.mysql.jdbc.Driver");
 
-//		DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-		DriverManager.deregisterDriver(new com.mysql.cj.jdbc.Driver());
-		
+		// DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+		DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+
 		String url = "jdbc:mysql://localhost:3306/car_rental";
-//		String url = "jdbc:mysql://localhost:3306/car_rental?useSSL=false&amp;serverTimezone=UTC";
-		
+		// String url =
+		// "jdbc:mysql://localhost:3306/car_rental?useSSL=false&amp;serverTimezone=UTC";
+
 		String user = "car_rental_user";
 		String password = "car_rental_user";
 		String sql = "select * from car";
